@@ -9,7 +9,6 @@ for file in os.listdir():
     # append those files that u stored in for loop to Array called files
     if os.path.isfile(file):
         files.append(file)
-print(files)
 
 with open("thekey.key", "rb") as key:
     secretkey = key.read()
@@ -20,3 +19,4 @@ for file in files:
     contents_decrypted = Fernet(secretkey).decrypt(contents)
     with open(file, "wb") as thefile:
         thefile.write(contents_decrypted)
+print("Thanks for the partnership, Enjoy your retirement with your files")

